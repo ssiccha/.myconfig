@@ -1,4 +1,4 @@
-ln -s .bash/bash_aliases ../.bash_aliases
-ln -s .bash/bash_logout ../.bash_logout
-ln -s .bash/bash_profile ../.bash_profile
-ln -s .bash/bashrc ../.bashrc
+#!/bin/bash
+ln -s ~/.bash/bashrc ~/.bashrc
+ln -s ~/.bash/bash_aliases ~/.bash_aliases
+ln -s ~/.bash/bash_profile ~/.bash_profile
