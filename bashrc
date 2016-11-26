@@ -4,6 +4,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# activate programmable bash completion
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
 # from github: jimeh/git-aware-prompt
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
