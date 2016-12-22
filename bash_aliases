@@ -39,3 +39,4 @@ alias cim='git commit -m'
 alias log='git log --oneline --max-count=15'
 alias gd='git diff HEAD'
 alias reset='git reset HEAD'
+alias gl='git ls-files -o ' # TODO check additional parameters?
