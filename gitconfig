@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+  name = Sergio Siccha
+  email = sergio.siccha@gmail.com
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  cim = commit -m
+  fixme = grep -n --color=auto --break --ignore-case -e 'FIX*' -e 'FIXME: *'
+  todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
+[core]
+  editor = vim
+[push]
+  default = simple
+[diff]
+  tool = vimdiff
