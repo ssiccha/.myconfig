@@ -3,3 +3,4 @@ ln -s ~/.bash/bashrc ~/.bashrc
 ln -s ~/.bash/bash_aliases ~/.bash_aliases
 ln -s ~/.bash/bash_profile ~/.bash_profile
 ln -s ~/.bash/gitconfig ~/.gitconfig
+ln -s ~/.bash/sshconfig ~/.ssh/config

@@ -1,0 +1,30 @@
+ServerAliveInterval 15
+
+Host emil
+    HostName emil.mathb.rwth-aachen.de
+    User sergio
+    IdentityFile ~/.ssh/id_rsa
+
+Host momo
+    HostName momo.mathb.rwth-aachen.de
+    User sergio
+    IdentityFile ~/.ssh/id_rsa
+
+Host mizar
+  HostName mizar.math.rwth-aachen.de
+  User siccha
+  IdentityFile ~/.ssh/ldfm
+
+Host mars
+  HostName mars.mathepool.rwth-aachen.de
+  User siccha
+
+Host github.com
+  IdentityFile ~/.ssh/github
+
+Host strato
+    HostName h2220283.stratoserver.net
+    User sergio
+    IdentityFile ~/.ssh/id_rsa
+
+# vim: ft=sshconfig
