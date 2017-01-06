@@ -4,5 +4,5 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-# Add ~/bin to PATH
-source $HOME/.kde4/env/path.sh
+# Add ~/.local/bin to PATH
+export PATH=${PATH}:${HOME}/.local/bin/
