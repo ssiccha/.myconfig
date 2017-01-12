@@ -1,0 +1,8 @@
+DisplayGenerators := function( G )
+  local m;
+  for m in GeneratorsOfGroup( G ) do
+    Display(m);
+    Print("\n");
+  od;
+end;
+# vim: set filetype=gap:
