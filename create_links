@@ -4,7 +4,7 @@ ln -sv ~/.myconfig/bash/aliases ~/.bash_aliases
 ln -sv ~/.myconfig/bash/profile ~/.bash_profile
 ln -sv ~/.myconfig/bash/logout ~/.bash_logout
 
-ln -sv ~/.myconfig/inputrc ~/.inputrc
+ln -sv ~/.myconfig/readline_inputrc ~/.inputrc
 
 ln -sv ~/.myconfig/gitconfig ~/.gitconfig
 ln -sv ~/.myconfig/sshconfig ~/.ssh/config
