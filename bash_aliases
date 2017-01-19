@@ -1,5 +1,6 @@
 # ~/.bash_aliases
 #
+alias rm='rm -I'
 alias vi='nvim'
 alias vimdiff='nvim -d '
 alias ..='cd ..'
