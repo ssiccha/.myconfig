@@ -1,6 +1,13 @@
 #!/bin/bash
-ln -s ~/.bash/bashrc ~/.bashrc
-ln -s ~/.bash/bash_aliases ~/.bash_aliases
-ln -s ~/.bash/bash_profile ~/.bash_profile
-ln -s ~/.bash/gitconfig ~/.gitconfig
-ln -s ~/.bash/sshconfig ~/.ssh/config
+ln -sv ~/.myconfig/bash/bashrc ~/.bashrc
+ln -sv ~/.myconfig/bash/aliases ~/.bash_aliases
+ln -sv ~/.myconfig/bash/profile ~/.bash_profile
+ln -sv ~/.myconfig/bash/logout ~/.bash_logout
+
+ln -sv ~/.myconfig/inputrc ~/.inputrc
+
+ln -sv ~/.myconfig/gitconfig ~/.gitconfig
+ln -sv ~/.myconfig/sshconfig ~/.ssh/config
+
+ln -sv ~/.myconfig/gap/gap.ini ~/.gap/gap.ini
+ln -sv ~/.myconfig/gap/gaprc ~/.gap/gaprc
