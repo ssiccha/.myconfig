@@ -34,6 +34,7 @@ alias lk='l.'
 # git
 alias st='git status --ignore-submodules'
 alias add='git add'
+alias pa='git add -p'
 alias amend='git commit --amend'
 alias cim='git commit -m'
 alias log='git log --oneline --max-count=15'
