@@ -7,7 +7,7 @@
   co = checkout
   ci = commit
   cim = commit -m
-  fixme = grep -n --color=auto --break --ignore-case -e 'FIX*' -e 'FIXME: *'
+  fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
 [core]
   editor = vim
