@@ -1,13 +1,13 @@
 #!/bin/bash
-ln -sv ~/.myconfig/bash/bashrc ~/.bashrc
-ln -sv ~/.myconfig/bash/aliases ~/.bash_aliases
-ln -sv ~/.myconfig/bash/profile ~/.bash_profile
-ln -sv ~/.myconfig/bash/logout ~/.bash_logout
+ln -sv ${PWD}/bash/bashrc ~/.bashrc
+ln -sv ${PWD}/bash/aliases ~/.bash_aliases
+ln -sv ${PWD}/bash/profile ~/.bash_profile
+ln -sv ${PWD}/bash/logout ~/.bash_logout
 
-ln -sv ~/.myconfig/readline_inputrc ~/.inputrc
+ln -sv ${PWD}/readline_inputrc ~/.inputrc
 
-ln -sv ~/.myconfig/gitconfig ~/.gitconfig
-ln -sv ~/.myconfig/sshconfig ~/.ssh/config
+ln -sv ${PWD}/gitconfig ~/.gitconfig
+ln -sv ${PWD}/sshconfig ~/.ssh/config
 
-ln -sv ~/.myconfig/gap/gap.ini ~/.gap/gap.ini
-ln -sv ~/.myconfig/gap/gaprc ~/.gap/gaprc
+ln -sv ${PWD}/gap/gap.ini ~/.gap/gap.ini
+ln -sv ${PWD}/gap/gaprc ~/.gap/gaprc
