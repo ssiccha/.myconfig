@@ -20,8 +20,8 @@ alias sol='cd ~/lehre/PermGruppen/solutions'
 
 #
 alias gap='gap -L ~/.gap/emptyWorkspace '
-alias gapdev='/home/sergio/source/gap_source/bin/gap.sh -L ~/.gap/emptyWorkspaceDev '
-alias hpcgap='hpcgap -r -P 6'
+alias gapdev='gapdev -L ~/.gap/emptyWorkspaceDev '
+alias hpcgap='hpcgap -r'
 alias vncemil='vncviewer emil:33 2> /dev/null &'
 
 # ls
