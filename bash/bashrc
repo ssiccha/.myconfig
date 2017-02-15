@@ -10,7 +10,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 # from github: jimeh/git-aware-prompt
-export GITAWAREPROMPT=~/.myconfig/bash/git-aware-prompt
+export GITAWAREPROMPT=${HOME}/.git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
 # Adds ~/bin, ~/.local/bin/ to PATH in
