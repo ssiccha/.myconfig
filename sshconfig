@@ -3,12 +3,12 @@ ServerAliveInterval 15
 Host emil
     HostName emil.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/keys/id_rsa
 
 Host momo
     HostName momo.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/keys/id_rsa
 
 Host mizar
   HostName mizar.math.rwth-aachen.de
@@ -20,11 +20,19 @@ Host mars
   User siccha
 
 Host github.com
-  IdentityFile ~/.ssh/github
+  IdentityFile ~/.ssh/keys/github
+
+## Access wwwb via momo
+# port 2022 on localhost is forwarded to 22 on wwwb via momo
+Host tunnel-momo
+    HostName momo.mathb.rwth-aachen.de
+    User sergio
+    IdentityFile ~/.ssh/keys/id_rsa
+    LocalForward 2022 wwwb:22
 
 Host strato
     HostName h2220283.stratoserver.net
     User sergio
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/keys/id_rsa
 
 # vim: ft=sshconfig
