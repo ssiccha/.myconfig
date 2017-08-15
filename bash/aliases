@@ -19,7 +19,7 @@ alias so='cd ~/lehre/PermGruppen/solutions'
 alias sol='cd ~/lehre/PermGruppen/solutions'
 
 # ssh-keys
-alias ssh-all-keys='ssh-add ~/.ssh/keys/*'
+alias addallkeys='ssh-add ~/.ssh/keys/*'
 
 # tools
 alias gap='gap -L ~/.gap/emptyWorkspace '
