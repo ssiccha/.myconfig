@@ -22,7 +22,7 @@ alias sol='cd ~/lehre/PermGruppen/solutions'
 alias addallkeys='ssh-add ~/.ssh/keys/*'
 
 # tools
-alias gap='gap -L ~/.gap/emptyWorkspace '
+# alias gap='gap -L ~/.gap/emptyWorkspace ' # workspaces kinda mess up the command line history
 alias gapdev='gapdev -L ~/.gap/emptyWorkspaceDev '
 alias hpcgap='hpcgap -r'
 alias vncemil='vncviewer emil:33 2> /dev/null &'
