@@ -29,7 +29,7 @@ alias vncemil='vncviewer emil:33 2> /dev/null &'
 
 # ls
 alias l='ls '
-alias ls='ls --color=auto '
+alias ls='ls --color=auto'
 alias ll='ls -lhF'
 alias la='ls -lahF'
 alias l.='ls -d .*'
