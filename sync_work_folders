@@ -1,0 +1,4 @@
+#!/bin/bash
+# create a symlink in ~/bin or similar?
+# use something like this as options for rsync
+#rsync --delete -ahvuHPAXEI
