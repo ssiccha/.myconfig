@@ -7,6 +7,7 @@
   co = checkout
   ci = commit
   cim = commit -m
+  update = pull --ff-only
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
 [core]
