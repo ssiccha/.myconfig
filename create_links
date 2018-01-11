@@ -1,10 +1,9 @@
 #!/bin/bash
 ln -sv ${PWD}/bash/bashrc ~/.bashrc
+ln -sv ${PWD}/bash/local_bashrc ~/.local_bashrc
 ln -sv ${PWD}/bash/aliases ~/.bash_aliases
 ln -sv ${PWD}/bash/profile ~/.bash_profile
 ln -sv ${PWD}/bash/logout ~/.bash_logout
-
-ln -sv ${PWD}/bash/git-aware-prompt ~/.git-aware-prompt
 
 ln -sv ${PWD}/readline_inputrc ~/.inputrc
 

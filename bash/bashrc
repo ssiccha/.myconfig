@@ -4,6 +4,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Enable extended globbing (expansion) to use patterns for case statements
+shopt -s extglob
+
 # activate programmable bash completion
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
@@ -13,8 +16,12 @@ fi
 export GITAWAREPROMPT=${HOME}/.myconfig/bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-# Adds ~/bin, ~/.local/bin/ to PATH in
+# ~/.local/bin/ is added to PATH in
 # $HOME/.kde4/env/path.sh
+# If it isn't in PATH, add it now
+if ! [[ $PATH =~ ".local/bin" ]]; then
+    export PATH=${PATH}:${HOME}/.local/bin
+fi
 
 # Set vi mode
 set -o vi
@@ -22,8 +29,19 @@ set -o vi
 # Prompt
 # \W: show only current dir
 # PS1='[\u@\h \w]\$ ' # default
-# PS1='\[\e[1;32m\][\u@\h \w]\$\[\e[0m\] '
-PS1="\[\e[0;32m\]\u\[\e[m\] \[\e[0;34m\]\w\[\e[m\] \[$txtpur\]\$git_branch\[$txtred\]\$git_dirty \[\e[1;32m\]\$\[\e[m\] "
+# @(..|..) is an extended globbing pattern which matches exactly one of the given pattens
+HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|makina)'
+case $HOSTNAME in
+    $HOSTNAMES_TO_IGNORE )
+        SHOW_HOSTNAME=''
+        ;;
+    * )
+        SHOW_HOSTNAME='\[$txtred\]@\h'
+        ;;
+esac
+PS1="\[\e[0;32m\]\u${SHOW_HOSTNAME}\[\e[m\] \[\e[0;34m\]\w\[\e[m\]"
+PS1+="\[$txtpur\]\$git_branch\[$txtred\]\$git_dirty \[\e[1;32m\]\$\[\e[m\] "
+export PS1
 
 # Disable C-Q and C-S hotkeys
 stty -ixon
@@ -38,3 +56,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # set TERM for neovim
 export TERM="xterm-256color"
+
+# Handle quirks of the local system
+if [ -f ~/.local_bashrc ]; then
+        . ~/.local_bashrc
+fi

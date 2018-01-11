@@ -1,2 +1,5 @@
+local_bashrc
+
+# GAP things
 gap/emptyWorkspace*
 gap/history
