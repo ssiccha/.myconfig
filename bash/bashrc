@@ -30,7 +30,7 @@ set -o vi
 # \W: show only current dir
 # PS1='[\u@\h \w]\$ ' # default
 # @(..|..) is an extended globbing pattern which matches exactly one of the given pattens
-HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|makina)'
+HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|sergio-tux)'
 case $HOSTNAME in
     $HOSTNAMES_TO_IGNORE )
         SHOW_HOSTNAME=''
@@ -40,7 +40,7 @@ case $HOSTNAME in
         ;;
 esac
 PS1="\[\e[0;32m\]\u${SHOW_HOSTNAME}\[\e[m\] \[\e[0;34m\]\w\[\e[m\]"
-PS1+="\[$txtpur\]\$git_branch\[$txtred\]\$git_dirty \[\e[1;32m\]\$\[\e[m\] "
+PS1+=" \[$txtpur\]\$git_branch\[$txtred\]\$git_dirty\[\e[1;32m\]\$\[\e[m\] "
 export PS1
 
 # Disable C-Q and C-S hotkeys
