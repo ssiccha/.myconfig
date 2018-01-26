@@ -11,7 +11,7 @@
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
 [core]
-  editor = vim
+  editor = nvim
 [push]
   default = simple
 [diff]
