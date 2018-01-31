@@ -22,17 +22,19 @@ Host mars
 Host github.com
   IdentityFile ~/.ssh/keys/github
 
-## Access wwwb via momo
-# port 2022 on localhost is forwarded to 22 on wwwb via momo
+Host strato
+    HostName h2220283.stratoserver.net
+    User sergio
+    IdentityFile ~/.ssh/keys/id_rsa
+
+## Forwarding: Access wwwb via momo
+# Port 2022 on localhost is forwarded to 22 on wwwb via momo
+# Call this via `ssh -fN tunnel-momo`.
+# (f)ork into background, (N)o command to execute
 Host tunnel-momo
     HostName momo.mathb.rwth-aachen.de
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
     LocalForward 2022 wwwb:22
-
-Host strato
-    HostName h2220283.stratoserver.net
-    User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
 
 # vim: ft=sshconfig
