@@ -27,14 +27,26 @@ Host strato
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
 
-## Forwarding: Access wwwb via momo
-# Port 2022 on localhost is forwarded to 22 on wwwb via momo
-# Call this via `ssh -fN tunnel-momo`.
+## Port Forwardings
+# Call these via `ssh -fN TARGET`.
 # (f)ork into background, (N)o command to execute
-Host tunnel-momo
+##
+# Directly ssh to wwwb via momo
+# Port 2022 on localhost is forwarded to 22 on wwwb via momo
+# Use this for a remote for git like this:
+# git+ssh://localhost:2022/REPO
+Host tunnel-wwwb
     HostName momo.mathb.rwth-aachen.de
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
     LocalForward 2022 wwwb:22
+
+# Access vnc port on emil
+# Port 5933 on localhost is forwarded to 5933 on emil via emil
+Host tunnel-emil-vnc
+    HostName emil.mathb.rwth-aachen.de
+    User sergio
+    IdentityFile ~/.ssh/keys/id_rsa
+    LocalForward 5933 localhost:5933
 
 # vim: ft=sshconfig
