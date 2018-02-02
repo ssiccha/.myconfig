@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# start a vncserver (tigervnc) on emil and forward a port via ssh
+# Start a vncserver (tigervnc) on emil
+# Use the ssh "target"
 # Arguments: $1=Displaynumber (optional)
 
 PORT="${1-33}"
