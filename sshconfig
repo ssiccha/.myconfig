@@ -10,6 +10,12 @@ Host momo
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
 
+Host wwwb
+    HostName localhost
+    Port 2022
+    User sergio
+    IdentityFile ~/.ssh/keys/id_rsa
+
 Host mizar
   HostName mizar.math.rwth-aachen.de
   User siccha
@@ -35,7 +41,7 @@ Host strato
 # Port 2022 on localhost is forwarded to 22 on wwwb via momo
 # Use this for a remote for git like this:
 # git+ssh://localhost:2022/REPO
-Host tunnel-wwwb
+Host wwwb-tunnel
     HostName momo.mathb.rwth-aachen.de
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
@@ -43,7 +49,7 @@ Host tunnel-wwwb
 
 # Access vnc port on emil
 # Port 5933 on localhost is forwarded to 5933 on emil via emil
-Host tunnel-emil-vnc
+Host emil-vnc-tunnel
     HostName emil.mathb.rwth-aachen.de
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
