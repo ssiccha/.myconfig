@@ -25,6 +25,8 @@ fi
 
 # Set vi mode
 set -o vi
+# Set neovim as EDITOR
+export EDITOR="nvim"
 
 # Prompt
 # \W: show only current dir
