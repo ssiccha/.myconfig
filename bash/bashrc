@@ -32,7 +32,7 @@ export EDITOR="nvim"
 # \W: show only current dir
 # PS1='[\u@\h \w]\$ ' # default
 # @(..|..) is an extended globbing pattern which matches exactly one of the given pattens
-HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|sergio-tux)'
+HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|sergio-tux|duygu-xlaptop|sergio-kdesktop)'
 case $HOSTNAME in
     $HOSTNAMES_TO_IGNORE )
         SHOW_HOSTNAME=''
