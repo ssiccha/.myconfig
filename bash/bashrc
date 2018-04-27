@@ -29,8 +29,10 @@ set -o vi
 export EDITOR="nvim"
 
 # Prompt
+# \w: show full dir stack
 # \W: show only current dir
-# PS1='[\u@\h \w]\$ ' # default
+# if using \w only show top 2 dirs
+export PROMPT_DIRTRIM=2
 # @(..|..) is an extended globbing pattern which matches exactly one of the given pattens
 HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|sergio-tux|duygu-xlaptop|sergio-kdesktop)'
 case $HOSTNAME in
@@ -41,6 +43,7 @@ case $HOSTNAME in
         SHOW_HOSTNAME='\[$txtred\]@\h'
         ;;
 esac
+# PS1='[\u@\h \w]\$ ' # default
 PS1="\[\e[0;32m\]\u${SHOW_HOSTNAME}\[\e[m\] \[\e[0;34m\]\w\[\e[m\]"
 PS1+=" \[$txtpur\]\$git_branch\[$txtred\]\$git_dirty\[\e[1;32m\]\$\[\e[m\] "
 export PS1
