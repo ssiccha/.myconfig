@@ -1,5 +1,10 @@
 ServerAliveInterval 15
 
+Host rzcluster
+    HostName cluster-x.rz.rwth-aachen.de
+    User ss527789
+    IdentityFile ~/.ssh/keys/id_rsa
+
 Host emil
     HostName emil.mathb.rwth-aachen.de
     User sergio
