@@ -21,7 +21,7 @@ alias sol='cd ~/lehre/PermGruppen/solutions'
 
 # ssh-keys
 # This needs extended globbing
-alias ssh-add-all-keys='ssh-add ~/.ssh/keys/!(*.pub)'
+alias all-ssh-keys-add='ssh-add ~/.ssh/keys/!(*.pub)'
 
 # tools
 # alias gap='gap -L ~/.gap/emptyWorkspace ' # workspaces kinda mess up the command line history
