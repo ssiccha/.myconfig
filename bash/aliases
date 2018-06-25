@@ -9,6 +9,7 @@ alias cl='clear'
 alias sc='screen '
 alias sl='screen -ls'
 alias sr='screen -RR'
+alias cwd='pwd | xsel -b'
 alias pd='pushd'
 # how did this work?
 # alias find='echo "aliased"; find -regextype posix-extended '
