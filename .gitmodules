@@ -1,0 +1,3 @@
+[submodule "scripts/git-scripts"]
+	path = scripts/git-scripts
+	url = git@github.com:ssiccha/git-scripts.git
