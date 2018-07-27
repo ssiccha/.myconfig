@@ -8,6 +8,7 @@
   ci = commit
   cim = commit -m
   update = pull --ff-only
+  continue = rebase --continue
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
 [core]
