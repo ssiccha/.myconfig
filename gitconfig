@@ -8,6 +8,7 @@
   ci = commit
   cim = commit -m
   update = pull --ff-only
+  restructure = "! git rebase -i HEAD~${1} #"
   continue = rebase --continue
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
