@@ -3,3 +3,6 @@ local_bashrc
 # GAP things
 gap/emptyWorkspace*
 gap/history
+
+# Directory for 2FA recovery codes
+2FA-recovery/
