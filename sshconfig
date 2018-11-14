@@ -10,6 +10,11 @@ Host emil
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
 
+Host emmy
+    HostName emmy.mathb.rwth-aachen.de
+    User sergio
+    IdentityFile ~/.ssh/keys/id_rsa
+
 Host momo
     HostName momo.mathb.rwth-aachen.de
     User sergio
