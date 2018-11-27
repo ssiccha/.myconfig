@@ -62,7 +62,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # set TERM for neovim
 export TERM="xterm-256color"
 
-# Handle quirks of the local system
+# Load a file which handles quirks of the local system
 if [ -f ~/.local_bashrc ]; then
         . ~/.local_bashrc
 fi
