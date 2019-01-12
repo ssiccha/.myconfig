@@ -4,6 +4,7 @@
   email = sergio.siccha@gmail.com
 [alias]
   st = status
+  ln = log --oneline --decorate --max-count=8
   co = checkout
   ci = commit
   cim = commit -m
