@@ -14,7 +14,7 @@
   restructure = "! git rebase -i ${1:+HEAD~}${1:-master} #"
   # This will reformat the last commit via clang-format
   clang-format = "! git diff -U0 --no-color HEAD^ | clang-format-diff -i -p1"
-  cpcontinue = cherry-pick --continue
+  ccontinue = cherry-pick --continue
   rcontinue = rebase --continue
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
