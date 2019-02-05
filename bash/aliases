@@ -39,6 +39,7 @@ alias lk='l.'
 alias lg='ls `git ls-files` '
 
 # git
+alias ln='git ln'
 alias st='git status --ignore-submodules'
 alias add='git add'
 alias pa='git add -p'
