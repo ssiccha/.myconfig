@@ -1,0 +1,22 @@
+#!/bin/bash
+# The GAP pkg JupyterKernel is used to run jupyter notebooks locally
+export PATH=${PATH}:${HOME}/projects/pkg/JupyterKernel/bin/
+# Make mouse slower: set "Constant Decelaration" of microsoft wireless mouse
+# Apparently the device id (17) and property id for "Device Accel Constant
+# Deceleration" (269) can change on a reboot.
+# Devices and their properties:
+# xinput --list
+# xinput --list-props
+# Devices
+TOUCHPAD_ID=13
+WIRELESS_MOUSE_ID=16
+WIRELESS_MOUSE_ID_2=$((${WIRELESS_MOUSE_ID} + 1))
+# Properties
+PROPERTY_ID_ACCEL_PROFILE=268
+PROPERTY_ID_CONSTANT_DECELERATION=$((${PROPERTY_ID_ACCEL_PROFILE} + 1))
+# Settings
+xinput --set-prop ${WIRELESS_MOUSE_ID}   ${PROPERTY_ID_CONSTANT_DECELERATION}   2.0
+xinput --set-prop ${WIRELESS_MOUSE_ID_2} ${PROPERTY_ID_CONSTANT_DECELERATION}   2.0
+xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_CONSTANT_DECELERATION}           3.0
+# Touchpad: turn off adaptive acceleration
+xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_ACCEL_PROFILE}                   0
