@@ -11,7 +11,8 @@
   cp = cherry-pick
   patch = add -p
   update = pull --ff-only
-  restructure = "! git rebase -i ${1:+HEAD~}${1:-master} #"
+  # Ehm, what do ${1:+ and ${1:- do again?
+  restructure = "! git rebase -i ${1:+HEAD~}${1:-upstream/master} #"
   # This will reformat the last commit via clang-format
   clang-format = "! git diff -U0 --no-color HEAD^ | clang-format-diff -i -p1"
   ccontinue = cherry-pick --continue
