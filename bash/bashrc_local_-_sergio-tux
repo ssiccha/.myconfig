@@ -3,20 +3,43 @@
 export PATH=${PATH}:${HOME}/projects/pkg/JupyterKernel/bin/
 # Make mouse slower: set "Constant Decelaration" of microsoft wireless mouse
 # Apparently the device id (17) and property id for "Device Accel Constant
-# Deceleration" (269) can change on a reboot.
+# Deceleration" (269).
 # Devices and their properties:
 # xinput --list
 # xinput --list-props
-# Devices
-TOUCHPAD_ID=13
-WIRELESS_MOUSE_ID=16
+
+# This is a bit ugly. We need to find device and properties IDs since they can
+# change on reboot.
+# grep the output of xinput --list
+TMP=$(xinput --list | grep TouchPad)
+# Remove *id= prefix
+TMP=${TMP#*id=}
+# Remove everything starting from the first whitespace
+TMP=$(echo $TMP | sed 's/\s.*//g')
+TOUCHPAD_ID=$TMP
+# TouchPad and first Wireless Mouse have IDs 13 and 16
+# Whichever ID Touchpad has, the Wireless Mouse has the other.
+if [ $TOUCHPAD_ID == "13" ]; then
+    WIRELESS_MOUSE_ID=16
+else
+    WIRELESS_MOUSE_ID=13
+fi;
 WIRELESS_MOUSE_ID_2=$((${WIRELESS_MOUSE_ID} + 1))
 # Properties
-PROPERTY_ID_ACCEL_PROFILE=268
+# grep the output of xinput --list-props
+TMP=$(xinput --list-props $WIRELESS_MOUSE_ID | grep "Device Accel Profile")
+# Remove prefix until ( and postfix from )
+TMP=${TMP#*\(}
+TMP=${TMP%\)*}
+PROPERTY_ID_ACCEL_PROFILE=$TMP
 PROPERTY_ID_CONSTANT_DECELERATION=$((${PROPERTY_ID_ACCEL_PROFILE} + 1))
+
 # Settings
-xinput --set-prop ${WIRELESS_MOUSE_ID}   ${PROPERTY_ID_CONSTANT_DECELERATION}   2.0
-xinput --set-prop ${WIRELESS_MOUSE_ID_2} ${PROPERTY_ID_CONSTANT_DECELERATION}   2.0
-xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_CONSTANT_DECELERATION}           3.0
+xinput --set-prop ${WIRELESS_MOUSE_ID}      \
+    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+xinput --set-prop ${WIRELESS_MOUSE_ID_2}    \
+    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+xinput --set-prop ${TOUCHPAD_ID}            \
+    ${PROPERTY_ID_CONSTANT_DECELERATION}    3.0
 # Touchpad: turn off adaptive acceleration
 xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_ACCEL_PROFILE}                   0
