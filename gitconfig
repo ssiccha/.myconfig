@@ -12,6 +12,9 @@
   patch = add -p
   update = pull --ff-only
   # Ehm, what do ${1:+ and ${1:- do again?
+  # ${1:+ means something like 'if 1st arg exists then'
+  # ${1:- means something like 'if 1st arg NULL then'
+  # The trailing # is a safety measure
   restructure = "! git rebase -i ${1:+HEAD~}${1:-upstream/master} #"
   # This will reformat the last commit via clang-format
   clang-format = "! git diff -U0 --no-color HEAD^ | clang-format-diff -i -p1"
