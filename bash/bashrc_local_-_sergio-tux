@@ -40,6 +40,6 @@ xinput --set-prop ${WIRELESS_MOUSE_ID}      \
 xinput --set-prop ${WIRELESS_MOUSE_ID_2}    \
     ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
 xinput --set-prop ${TOUCHPAD_ID}            \
-    ${PROPERTY_ID_CONSTANT_DECELERATION}    3.0
+    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.5
 # Touchpad: turn off adaptive acceleration
 xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_ACCEL_PROFILE}                   0
