@@ -17,14 +17,18 @@ TMP=${TMP#*id=}
 # Remove everything starting from the first whitespace
 TMP=$(echo $TMP | sed 's/\s.*//g')
 TOUCHPAD_ID=$TMP
-# TouchPad and first Wireless Mouse have IDs 13 and 16
-# Whichever ID Touchpad has, the Wireless Mouse has the other.
-if [ $TOUCHPAD_ID == "13" ]; then
-    WIRELESS_MOUSE_ID=16
-else
-    WIRELESS_MOUSE_ID=13
-fi;
+# Do the same for "Microsoft Microsoft® 2.4GHz ..."
+TMP=$(xinput --list | grep Microsoft)
+TMP=${TMP#*id=}
+TMP=$(echo $TMP | sed 's/\s.*//g')
+WIRELESS_MOUSE_ID=$TMP
 WIRELESS_MOUSE_ID_2=$((${WIRELESS_MOUSE_ID} + 1))
+# And the same for "USB Optical Mouse"
+TMP=$(xinput --list | grep 'USB Optical Mouse')
+TMP=${TMP#*id=}
+TMP=$(echo $TMP | sed 's/\s.*//g')
+OPTICAL_MOUSE_ID=$TMP
+
 # Properties
 # grep the output of xinput --list-props
 TMP=$(xinput --list-props $WIRELESS_MOUSE_ID | grep "Device Accel Profile")
@@ -35,11 +39,15 @@ PROPERTY_ID_ACCEL_PROFILE=$TMP
 PROPERTY_ID_CONSTANT_DECELERATION=$((${PROPERTY_ID_ACCEL_PROFILE} + 1))
 
 # Settings
-xinput --set-prop ${WIRELESS_MOUSE_ID}      \
-    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
-xinput --set-prop ${WIRELESS_MOUSE_ID_2}    \
-    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
-xinput --set-prop ${TOUCHPAD_ID}            \
-    ${PROPERTY_ID_CONSTANT_DECELERATION}    2.5
-# Touchpad: turn off adaptive acceleration
+# turn off adaptive acceleration
 xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_ACCEL_PROFILE}                   0
+xinput --set-prop ${TOUCHPAD_ID}                \
+    ${PROPERTY_ID_CONSTANT_DECELERATION}        3.5
+if [ $WIRELESS_MOUSE_ID ]; then
+    xinput --set-prop ${WIRELESS_MOUSE_ID}      \
+        ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+fi
+if [ $OPTICAL_MOUSE_ID ]; then
+    xinput --set-prop ${OPTICAL_MOUSE_ID}       \
+        ${PROPERTY_ID_CONSTANT_DECELERATION}    1.7
+fi
