@@ -12,5 +12,6 @@ ln -sv ${PWD}/sshconfig ${HOME}/.ssh/config
 
 ln -sv ${PWD}/nvim ${XDG_CONFIG_HOME}
 
+mkdir -p ${HOME}/.gap
 ln -sv ${PWD}/gap/gap.ini ${HOME}/.gap/gap.ini
 ln -sv ${PWD}/gap/gaprc ${HOME}/.gap/gaprc
