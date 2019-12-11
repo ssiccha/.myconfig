@@ -42,9 +42,11 @@ PROPERTY_ID_CONSTANT_DECELERATION=$((${PROPERTY_ID_ACCEL_PROFILE} + 1))
 # turn off adaptive acceleration
 xinput --set-prop ${TOUCHPAD_ID} ${PROPERTY_ID_ACCEL_PROFILE}                   0
 xinput --set-prop ${TOUCHPAD_ID}                \
-    ${PROPERTY_ID_CONSTANT_DECELERATION}        3.5
+    ${PROPERTY_ID_CONSTANT_DECELERATION}        3.0
 if [ $WIRELESS_MOUSE_ID ]; then
     xinput --set-prop ${WIRELESS_MOUSE_ID}      \
+        ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+    xinput --set-prop ${WIRELESS_MOUSE_ID_2}      \
         ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
 fi
 if [ $OPTICAL_MOUSE_ID ]; then
