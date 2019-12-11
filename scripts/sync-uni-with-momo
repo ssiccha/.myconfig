@@ -5,4 +5,4 @@
 # z = zip,
 # --delete = deletes files that don't exist in source
 # Useful to track moved files.
- rsync -azv --delete --exclude='.git' $HOME/uni/ momo:tux-uni
+ rsync -azv --delete --exclude='.git' $HOME/uni/ emil:tux-uni
