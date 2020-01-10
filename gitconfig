@@ -24,6 +24,7 @@
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
 [core]
   editor = nvim
+  excludesfile = /home/sergio/.gitignore
 [push]
   default = simple
 [diff]

@@ -45,9 +45,9 @@ xinput --set-prop ${TOUCHPAD_ID}                \
     ${PROPERTY_ID_CONSTANT_DECELERATION}        3.0
 if [ $WIRELESS_MOUSE_ID ]; then
     xinput --set-prop ${WIRELESS_MOUSE_ID}      \
-        ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+        ${PROPERTY_ID_CONSTANT_DECELERATION}    1.8
     xinput --set-prop ${WIRELESS_MOUSE_ID_2}      \
-        ${PROPERTY_ID_CONSTANT_DECELERATION}    2.0
+        ${PROPERTY_ID_CONSTANT_DECELERATION}    1.8
 fi
 if [ $OPTICAL_MOUSE_ID ]; then
     xinput --set-prop ${OPTICAL_MOUSE_ID}       \
