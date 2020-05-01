@@ -43,6 +43,12 @@ Host strato
     User sergio
     IdentityFile ~/.ssh/keys/id_rsa
 
+Host siteground
+    HostName nadeloehr-salzgitter.de
+    User u445-6b33pjhyedqr
+    Port 18765
+    IdentityFile ~/.ssh/keys/siteground
+
 ## Port Forwardings
 # Call these via `ssh -fN TARGET`.
 # (f)ork into background, (N)o command to execute
