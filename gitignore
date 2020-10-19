@@ -1,0 +1,56 @@
+local_bashrc
+
+# GAP things
+bin/mygap.sh
+
+# Directory for 2FA recovery codes
+2FA-recovery/
+## Dolphin
+.directory
+
+## vi
+*.swp
+
+## pictures
+*.jpg
+*.JPG
+
+## nfs
+.nfs*
+
+### LaTeX ###
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+# mklatex
+*.fdb_latexmk
+*.synctex.gz
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+# amsthm
+*.thm
+
+# beamer
+*.nav
+*.snm
+*.vrb
+ 
+# xypic
+*.xyc
