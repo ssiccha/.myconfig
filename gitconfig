@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
   name = Sergio Siccha
-  email = sergio.siccha@gmail.com
+  email = sergio.siccha@posteo.net
 [alias]
   st = status
   stu = status -uno
