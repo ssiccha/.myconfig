@@ -1,4 +1,4 @@
-DisplayGenerators := function( G )
+MyDisplayGenerators := function( G )
   local m;
   for m in GeneratorsOfGroup( G ) do
     Display(m);
