@@ -38,6 +38,9 @@ Host mars
 Host github.com
   IdentityFile ~/.ssh/keys/github
 
+Host github.com
+  IdentityFile ~/.ssh/keys/id_rsa
+
 Host strato
     HostName h2220283.stratoserver.net
     User sergio

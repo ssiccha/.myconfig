@@ -5,9 +5,11 @@
 [alias]
   st = status
   stu = status -uno
+  shownames = show --name-only
   ln = log --oneline --decorate --max-count=8
   co = checkout
   ci = commit
+  cif = commit --fixup
   cim = commit -m
   cp = cherry-pick
   patch = add -p

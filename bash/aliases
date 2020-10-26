@@ -5,29 +5,18 @@ alias vimdiff='nvim -d '
 alias ..='cd ..'
 alias cd..='cd ..'
 alias rg='grep -nr --color=auto --exclude-dir=\.git'
-alias cl='clear'
-alias sc='screen '
-alias sl='screen -ls'
-alias sr='screen -RR'
+alias xclipb='xclip -selection clipboard'
 alias cwd='pwd | xsel -b'
 alias pd='pushd'
 # how did this work?
 # alias find='echo "aliased"; find -regextype posix-extended '
-
-# semester dependent locations
-alias ex='cd ~/lehre/PermGruppen/exercises'
-alias so='cd ~/lehre/PermGruppen/solutions'
-alias sol='cd ~/lehre/PermGruppen/solutions'
 
 # ssh-keys
 # This needs extended globbing
 alias all-ssh-keys-add='ssh-add ~/.ssh/keys/!(*.pub)'
 
 # tools
-# alias gap='gap -L ~/.gap/emptyWorkspace ' # workspaces kinda mess up the command line history
-# alias gapdev='gapdev -L ~/.gap/emptyWorkspaceDev ' # workspaces kinda mess up the command line history
 alias hpcgap='hpcgap -r'
-alias vncemil='vncviewer emil:33 2> /dev/null &'
 
 # ls
 alias l='ls '
