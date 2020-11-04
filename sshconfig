@@ -29,7 +29,12 @@ Host wwwb
 Host mizar
   HostName mizar.math.rwth-aachen.de
   User siccha
-  IdentityFile ~/.ssh/ldfm
+  IdentityFile ~/.ssh/keys/id_rsa
+
+Host schedir
+  HostName schedir.math.rwth-aachen.de
+  User siccha
+  IdentityFile ~/.ssh/keys/id_rsa
 
 Host mars
   HostName mars.mathepool.rwth-aachen.de
