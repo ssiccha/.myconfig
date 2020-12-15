@@ -1,3 +1,4 @@
 #!/bin/bash
 # The GAP pkg JupyterKernel is used to run jupyter notebooks locally
 export PATH=${PATH}:${HOME}/projects/pkg/JupyterKernel/bin/
+source ${HOME}/.gh_completion

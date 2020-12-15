@@ -17,6 +17,7 @@ alias all-ssh-keys-add='ssh-add ~/.ssh/keys/!(*.pub)'
 
 # tools
 alias hpcgap='hpcgap -r'
+alias scrcpy='scrcpy  -b2M -m1500'
 
 # ls
 alias l='ls '
