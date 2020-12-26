@@ -16,11 +16,12 @@ fi
 export GITAWAREPROMPT=${HOME}/.myconfig/bash/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
 
-# ~/.local/bin/ is added to PATH in
-# $HOME/.kde4/env/path.sh
-# If it isn't in PATH, add it now
+# add folders to PATH if not already contained
 if ! [[ $PATH =~ ".local/bin" ]]; then
     export PATH=${PATH}:${HOME}/.local/bin
+fi
+if ! [[ $PATH =~ ".myconfig/scripts" ]]; then
+    export PATH=${PATH}:${HOME}/.myconfig/scripts
 fi
 
 # Set vi mode
