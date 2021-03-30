@@ -6,6 +6,7 @@
   # will only work once I have git >= 2.28
   defaultBranch = main
 [alias]
+  sw = switch
   st = status
   stu = status -uno
   shownames = show --name-only
