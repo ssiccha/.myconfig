@@ -1,10 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
   name = Sergio Siccha
-  email = sergio.siccha@posteo.net
+  email = siccha@mathematik.uni-kl.de
 [init]
   # will only work once I have git >= 2.28
   defaultBranch = main
+	templatedir = ~/.git_template
 [alias]
   sw = switch
   st = status
