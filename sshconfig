@@ -46,6 +46,9 @@ Host github.com
 Host github.com
   IdentityFile ~/.ssh/keys/id_rsa
 
+Host gitlab.rhrk.uni-kl.de
+  IdentityFile ~/.ssh/keys/id_rsa
+
 Host strato
     HostName h2220283.stratoserver.net
     User sergio
