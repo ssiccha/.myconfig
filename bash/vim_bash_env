@@ -1,0 +1,3 @@
+# https://unix.stackexchange.com/questions/550622/how-to-run-aliases-commands-in-inside-the-vim-editor
+shopt -s expand_aliases
+source ~/.bash_aliases

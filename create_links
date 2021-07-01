@@ -4,6 +4,7 @@ ln -sv ${PWD}/bash/local_bashrc ${HOME}/.local_bashrc
 ln -sv ${PWD}/bash/aliases ${HOME}/.bash_aliases
 ln -sv ${PWD}/bash/profile ${HOME}/.bash_profile
 ln -sv ${PWD}/bash/logout ${HOME}/.bash_logout
+ln -sv ${PWD}/bash/vim_bash_env ${HOME}/.vim_bash_env
 
 ln -sv ${PWD}/readline_inputrc ${HOME}/.inputrc
 
