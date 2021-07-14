@@ -23,7 +23,7 @@
   # ${1:+ means something like 'if 1st arg exists then'
   # ${1:- means something like 'if 1st arg NULL then'
   # The trailing # is a safety measure
-  restructure = "! git rebase -i ${1:+HEAD~}${1:-upstream/master} || git rebase -i ${1:+HEAD~}${1:-upstream/main} #"
+  restructure = "! git rebase -i ${1:+HEAD~}${1:-upstream/master} || git rebase -i ${1:+HEAD~}${1:-upstream/main} || git rebase -i ${1:+HEAD~}${1:-origin/main} || git rebase -i ${1:+HEAD~}${1:-origin/master} #"
   # This will reformat the last commit via clang-format
   clang-format = "! git diff -U0 --no-color HEAD^ | clang-format-diff -i -p1"
   ccontinue = cherry-pick --continue
