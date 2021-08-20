@@ -58,6 +58,9 @@ if [ -f ~/.bash_aliases ]; then
         . ~/.bash_aliases
 fi
 
+# How many lines should the history keep? All of them.
+export HISTFILESIZE=-1
+
 # some XDG stuff?
 export XDG_CONFIG_HOME="$HOME/.config"
 
