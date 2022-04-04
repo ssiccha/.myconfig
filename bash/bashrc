@@ -36,7 +36,7 @@ export EDITOR="nvim"
 # if using \w only show top 2 dirs
 export PROMPT_DIRTRIM=2
 # @(..|..) is an extended globbing pattern which matches exactly one of the given pattens
-HOSTNAMES_TO_IGNORE='@(elwin.math.rwth-aachen.de|elwin.mathb.rwth-aachen.de|sergio-tux|duygu-xlaptop|sergio-kdesktop)'
+HOSTNAMES_TO_IGNORE='@(f4d4889a99e9.ant.amazon.com|sergio-tux|duygu-xlaptop|sergio-kdesktop)'
 case $HOSTNAME in
     $HOSTNAMES_TO_IGNORE )
         SHOW_HOSTNAME=''
@@ -78,4 +78,6 @@ fi
 if [ -f ~/.bash_text ]; then
         . ~/.bash_text
 fi
-source "$HOME/.cargo/env"
+if [ -f ~/.cargo/env ]; then
+        . "$HOME/.cargo/env"
+fi
