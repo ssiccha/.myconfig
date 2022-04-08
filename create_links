@@ -9,6 +9,9 @@ ln -sv ${PWD}/bash/vim_bash_env ${HOME}/.vim_bash_env
 ln -sv ${PWD}/readline_inputrc ${HOME}/.inputrc
 
 ln -sv ${PWD}/gitconfig ${HOME}/.gitconfig
+echo "git config --global init.templatedir '~/.git_template'"
+git config --global init.templatedir '~/.git_template'
+ln -sv ${PWD}/git_template ${HOME}/.git_template
 ln -sv ${PWD}/sshconfig ${HOME}/.ssh/config
 
 ln -sv ${PWD}/nvim ${XDG_CONFIG_HOME}

@@ -1,6 +1,8 @@
 # ~/.bash_aliases
 #
 alias vi='nvim '
+alias vi-listen='nvim --listen /tmp/nvim.pipe '
+alias vi-send='nvim --server /tmp/nvim.pipe --remote'
 alias nvim="nvim -c 'source \$MYVIMRC'"
 alias vi-julia='nvim **/*.{jl,md} '
 alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml '
@@ -34,7 +36,6 @@ alias lk='l.'
 alias lg='ls `git ls-files` '
 
 # git
-alias ln='git ln'
 alias st='git status --ignore-submodules'
 alias stu='git status --ignore-submodules -uno'
 alias add='git add'
