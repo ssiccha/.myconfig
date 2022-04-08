@@ -32,9 +32,11 @@
   rcontinue = rebase --continue
   fixme = grep -n --color=auto --break --ignore-case -e 'FIXME*'
   todo  = grep -n --color=auto --break --ignore-case -e 'TODO*'
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)%an <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [core]
   editor = nvim
   excludesfile = /home/sergio/.myconfig/gitignore
+	pager = less -FMRiX
 [push]
   default = simple
 [diff]
@@ -45,3 +47,5 @@
   autosquash = true
 [advice]
   detachedHead = false
+[color]
+	ui = auto

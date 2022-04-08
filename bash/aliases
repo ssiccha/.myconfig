@@ -1,8 +1,9 @@
 # ~/.bash_aliases
 #
-alias vi='nvim'
-alias vi-julia='nvim **/*.{jl,md}'
-alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml'
+alias vi='nvim '
+alias nvim="nvim -c 'source \$MYVIMRC'"
+alias vi-julia='nvim **/*.{jl,md} '
+alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml '
 alias vimdiff='nvim -d '
 alias ..='cd ..'
 alias cd..='cd ..'
