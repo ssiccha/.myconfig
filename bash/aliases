@@ -9,6 +9,9 @@ alias vi-julia='nvim **/*.{jl,md} '
 alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml '
 alias vi-dotfiles='nvim ~/.myconfig/** ~/.vim/{ftplugin/*,mappings,vimrc} '
 
+# tmux
+alias ta='tmux attach'
+
 alias ..='cd ..'
 alias cd..='cd ..'
 alias rg='grep -nR --color=always --exclude-dir=\.git --exclude-dir=\.venv'
@@ -44,6 +47,5 @@ alias amend='git commit --amend'
 alias cim='git commit -m'
 alias gd='git diff'
 alias gdw='git diff --color-words'
-alias branch='git branch'
 alias reset='git reset HEAD'
 alias gl='git ls-files -o ' # TODO check additional parameters?
