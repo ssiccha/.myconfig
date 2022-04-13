@@ -1,12 +1,14 @@
 # ~/.bash_aliases
-#
+# Neovim
 alias vi='nvim '
 alias vi-listen='nvim --listen /tmp/nvim.pipe '
 alias vi-send='nvim --server /tmp/nvim.pipe --remote'
 alias nvim="nvim -c 'source \$MYVIMRC'"
+alias vimdiff='nvim -d '
 alias vi-julia='nvim **/*.{jl,md} '
 alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml '
-alias vimdiff='nvim -d '
+alias vi-dotfiles='nvim ~/.myconfig/** ~/.vim/{ftplugin/*,mappings,vimrc} '
+
 alias ..='cd ..'
 alias cd..='cd ..'
 alias rg='grep -nR --color=always --exclude-dir=\.git --exclude-dir=\.venv'
@@ -15,8 +17,6 @@ alias find-gap='find -regextype posix-extended -regex '\''.*\.(g|gi|gd|tst|xml|a
 alias xclipb='xclip -selection clipboard'
 alias cwd='pwd | xsel -b'
 alias pd='pushd'
-# how did this work?
-# alias find='echo "aliased"; find -regextype posix-extended '
 
 # ssh-keys
 # This needs extended globbing
