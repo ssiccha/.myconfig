@@ -12,8 +12,12 @@ ln -sv ${PWD}/gitconfig ${HOME}/.gitconfig
 echo "git config --global init.templatedir '~/.git_template'"
 git config --global init.templatedir '~/.git_template'
 ln -sv ${PWD}/git_template ${HOME}/.git_template
+
 ln -sv ${PWD}/sshconfig ${HOME}/.ssh/config
 
+ln -sv ${PWD}/tmux.conf ${HOME}/.tmux.conf
+
+# This is broken
 ln -sv ${PWD}/nvim ${XDG_CONFIG_HOME}
 
 mkdir -p ${HOME}/.gap
