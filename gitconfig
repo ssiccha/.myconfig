@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-  name = Sergio Siccha
-  email = siccha@mathematik.uni-kl.de
+  name = Sergio Christian Siccha
+  email = sergiocf@amazon.de
 [init]
   # will only work once I have git >= 2.28
   defaultBranch = main
