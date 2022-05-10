@@ -1,25 +1,26 @@
 #!/bin/bash
-ln -sv ${PWD}/bash/bashrc ${HOME}/.bashrc
-ln -sv ${PWD}/bash/local_bashrc ${HOME}/.local_bashrc
-ln -sv ${PWD}/bash/aliases ${HOME}/.bash_aliases
-ln -sv ${PWD}/bash/profile ${HOME}/.bash_profile
-ln -sv ${PWD}/bash/logout ${HOME}/.bash_logout
-ln -sv ${PWD}/bash/vim_bash_env ${HOME}/.vim_bash_env
+CONFIG_DIR=${HOME}/.myconfig
+ln -sv ${CONFIG_DIR}/bash/bashrc ${HOME}/.bashrc
+ln -sv ${CONFIG_DIR}/bash/bashrc_local ${HOME}/.bashrc_local
+ln -sv ${CONFIG_DIR}/bash/aliases ${HOME}/.bash_aliases
+ln -sv ${CONFIG_DIR}/bash/profile ${HOME}/.bash_profile
+ln -sv ${CONFIG_DIR}/bash/logout ${HOME}/.bash_logout
+ln -sv ${CONFIG_DIR}/bash/vim_bash_env ${HOME}/.vim_bash_env
 
-ln -sv ${PWD}/readline_inputrc ${HOME}/.inputrc
+ln -sv ${CONFIG_DIR}/readline_inputrc ${HOME}/.inputrc
 
-ln -sv ${PWD}/gitconfig ${HOME}/.gitconfig
+ln -sv ${CONFIG_DIR}/gitconfig ${HOME}/.gitconfig
 echo "git config --global init.templatedir '~/.git_template'"
 git config --global init.templatedir '~/.git_template'
-ln -sv ${PWD}/git_template ${HOME}/.git_template
+ln -sv ${CONFIG_DIR}/git_template ${HOME}/.git_template
 
-ln -sv ${PWD}/sshconfig ${HOME}/.ssh/config
+ln -sv ${CONFIG_DIR}/sshconfig ${HOME}/.ssh/config
 
-ln -sv ${PWD}/tmux.conf ${HOME}/.tmux.conf
+ln -sv ${CONFIG_DIR}/tmux.conf ${HOME}/.tmux.conf
 
 # This is broken
-ln -sv ${PWD}/nvim ${XDG_CONFIG_HOME}
+ln -sv ${CONFIG_DIR}/nvim ${XDG_CONFIG_HOME}
 
 mkdir -p ${HOME}/.gap
-ln -sv ${PWD}/gap/gap.ini ${HOME}/.gap/gap.ini
-ln -sv ${PWD}/gap/gaprc ${HOME}/.gap/gaprc
+ln -sv ${CONFIG_DIR}/gap/gap.ini ${HOME}/.gap/gap.ini
+ln -sv ${CONFIG_DIR}/gap/gaprc ${HOME}/.gap/gaprc
