@@ -1,5 +1,8 @@
 local_bashrc
 
+# ctags file
+tags
+
 # GAP things
 bin/mygap.sh
 
