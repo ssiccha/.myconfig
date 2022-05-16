@@ -74,6 +74,11 @@ export TERM="xterm-256color"
 # Set Julia variable for where to search for packages
 export JULIA_LOAD_PATH="$HOME/aktuell/symbolisches_rechnen/gitlab/:$JULIA_LOAD_PATH"
 
+# Immediately write into history instead of only on exit
+PROMPT_COMMAND="history -a"
+# Change writing to history to "append-mode"
+shopt -s histappend
+
 # Load a file which handles quirks of the local system
 if [ -f ~/.bashrc_local ]; then
         . ~/.bashrc_local
