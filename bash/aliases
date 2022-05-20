@@ -3,7 +3,8 @@
 alias vi='nvim '
 alias vi-listen='nvim --listen /tmp/nvim.pipe '
 alias vi-send='nvim --server /tmp/nvim.pipe --remote'
-alias nvim="nvim -c 'source \$MYVIMRC'"
+#alias nvim="nvim -c 'source \$MYVIMRC'"
+alias nvim="nvim -c 'source ~/.vim/hack_mappings'"
 alias vimdiff='nvim -d '
 alias vi-julia='nvim **/*.{jl,md} '
 alias vi-gap='nvim {gap,lib,tst}/**/*.{g*,tst} doc/*.xml '
@@ -47,4 +48,5 @@ alias cim='git commit -m'
 alias gd='git diff'
 alias gdw='git diff --color-words'
 alias reset='git reset HEAD'
-alias gl='git ls-files -o ' # TODO check additional parameters?
+alias gls='git ls-files -o ' # TODO check additional parameters?
+alias gl='git ln ' # TODO check additional parameters?
