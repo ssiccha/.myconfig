@@ -17,7 +17,8 @@ ln -sv ${CONFIG_DIR}/git_template ${HOME}/.git_template
 
 ln -sv ${CONFIG_DIR}/sshconfig ${HOME}/.ssh/config
 
-ln -sv ${CONFIG_DIR}/tmux.conf ${HOME}/.tmux.conf
+ln -sv ${CONFIG_DIR}/tmux/tmux.conf ${HOME}/.tmux.conf
+ln -sv ${CONFIG_DIR}/tmux/tmux.plugins.conf ${HOME}/.tmux.plugins.conf
 
 # This is broken
 ln -sv ${CONFIG_DIR}/nvim ${XDG_CONFIG_HOME}
