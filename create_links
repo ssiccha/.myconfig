@@ -11,9 +11,11 @@ ln -sv ${CONFIG_DIR}/readline_inputrc ${HOME}/.inputrc
 
 ln -sv ${CONFIG_DIR}/gitconfig ${HOME}/.gitconfig
 ln -sv ${CONFIG_DIR}/gitignore ${HOME}/.gitignore
-echo "git config --global init.templatedir '~/.git_template'"
-git config --global init.templatedir '~/.git_template'
-ln -sv ${CONFIG_DIR}/git_template ${HOME}/.git_template
+
+# I used this for tags but I don't use tags anymore
+# echo "git config --global init.templatedir '~/.git_template'"
+# git config --global init.templatedir '~/.git_template'
+# ln -sv ${CONFIG_DIR}/git_template ${HOME}/.git_template
 
 ln -sv ${CONFIG_DIR}/sshconfig ${HOME}/.ssh/config
 

@@ -15,7 +15,7 @@ fi
 
 # from github: jimeh/git-aware-prompt
 export GITAWAREPROMPT=${HOME}/.myconfig/bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
+#source "${GITAWAREPROMPT}/main.sh"
 
 # from github: git/git/master/contrib/completion/git-completion.bash
 export GITCOMPLETION=${HOME}/.myconfig/bash/git-completion.bash
@@ -64,6 +64,8 @@ fi
 
 # How many lines should the history keep? All of them.
 export HISTFILESIZE=-1
+# -1 or bigger values than this are not supported on secure machines
+export HISTSIZE=1000000000
 
 # some XDG stuff?
 export XDG_CONFIG_HOME="$HOME/.config"

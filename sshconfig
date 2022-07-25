@@ -1,40 +1,35 @@
 ServerAliveInterval 15
 
-Host rzcluster
-    HostName cluster-x.rz.rwth-aachen.de
-    User ss527789
-    IdentityFile ~/.ssh/keys/id_rsa
-
 Host emil
     HostName emil.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
 
 Host emmy
     HostName emmy.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
 
 Host momo
     HostName momo.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
 
 Host wwwb
     HostName localhost
     Port 2022
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
 
 Host mizar
   HostName mizar.math.rwth-aachen.de
   User siccha
-  IdentityFile ~/.ssh/keys/id_rsa
+  IdentityFile ~/.ssh/keys/tux_rsa
 
 Host schedir
   HostName schedir.math.rwth-aachen.de
   User siccha
-  IdentityFile ~/.ssh/keys/id_rsa
+  IdentityFile ~/.ssh/keys/tux_rsa
 
 Host mars
   HostName mars.mathepool.rwth-aachen.de
@@ -47,12 +42,12 @@ Host github.com
   IdentityFile ~/.ssh/keys/id_rsa
 
 Host gitlab.rhrk.uni-kl.de
-  IdentityFile ~/.ssh/keys/id_rsa
+  IdentityFile ~/.ssh/keys/tux_rsa
 
 Host strato
     HostName h2220283.stratoserver.net
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
 
 Host siteground
     HostName nadeloehr-salzgitter.de
@@ -60,6 +55,10 @@ Host siteground
     Port 18765
     IdentityFile ~/.ssh/keys/siteground
 
+Host clouddesktop
+    HostName dev-dsk-sergiocf-1b-615508f8.eu-west-1.amazon.com
+    User sergiocf
+    IdentityFile ~/.ssh/id_rsa
 ## Port Forwardings
 # Call these via `ssh -fN TARGET`.
 # (f)ork into background, (N)o command to execute
@@ -71,7 +70,7 @@ Host siteground
 Host wwwb-tunnel
     HostName momo.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
     LocalForward 2022 wwwb:22
 
 # Access vnc port on emil
@@ -79,7 +78,7 @@ Host wwwb-tunnel
 Host emil-vnc-tunnel
     HostName emil.mathb.rwth-aachen.de
     User sergio
-    IdentityFile ~/.ssh/keys/id_rsa
+    IdentityFile ~/.ssh/keys/tux_rsa
     LocalForward 5933 localhost:5933
 
 # vim: ft=sshconfig
