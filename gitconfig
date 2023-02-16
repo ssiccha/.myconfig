@@ -49,3 +49,8 @@
   detachedHead = false
 [color]
 	ui = auto
+# http://git-scm.com/docs/git-rerere
+# reuse recorded resolution
+# During rebase, no need to repeat the same conflict resolution over and over
+[rerere]
+	enabled = true
