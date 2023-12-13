@@ -13,6 +13,7 @@
   st = status
   stu = status -uno
   shownames = show --name-only
+  lognames = log --name-only
   ln = log --oneline --decorate --max-count=8
   co = checkout
   ci = commit
@@ -49,8 +50,9 @@
   detachedHead = false
 [color]
 	ui = auto
-# http://git-scm.com/docs/git-rerere
 # reuse recorded resolution
 # During rebase, no need to repeat the same conflict resolution over and over
+# https://git-scm.com/book/en/v2/Git-Tools-Rerere
+# http://git-scm.com/docs/git-rerere
 [rerere]
 	enabled = true

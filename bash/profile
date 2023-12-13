@@ -3,3 +3,4 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"

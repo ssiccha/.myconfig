@@ -12,6 +12,8 @@ ln -sv ${CONFIG_DIR}/readline_inputrc ${HOME}/.inputrc
 ln -sv ${CONFIG_DIR}/gitconfig ${HOME}/.gitconfig
 ln -sv ${CONFIG_DIR}/gitignore ${HOME}/.gitignore
 
+ln -sv ${CONFIG_DIR}/flake8 ${HOME}/.config/flake8
+
 # I used this for tags but I don't use tags anymore
 # echo "git config --global init.templatedir '~/.git_template'"
 # git config --global init.templatedir '~/.git_template'
@@ -20,7 +22,6 @@ ln -sv ${CONFIG_DIR}/gitignore ${HOME}/.gitignore
 ln -sv ${CONFIG_DIR}/sshconfig ${HOME}/.ssh/config
 
 ln -sv ${CONFIG_DIR}/tmux/tmux.conf ${HOME}/.tmux.conf
-ln -sv ${CONFIG_DIR}/tmux/tmux.plugins.conf ${HOME}/.tmux.plugins.conf
 
 # This is broken
 ln -sv ${CONFIG_DIR}/nvim ${XDG_CONFIG_HOME}

@@ -15,7 +15,8 @@ fi
 
 # from github: jimeh/git-aware-prompt
 export GITAWAREPROMPT=${HOME}/.myconfig/bash/git-aware-prompt
-#source "${GITAWAREPROMPT}/main.sh"
+# Also needs to be sourced in amazon specific mac bashrc.
+source "${GITAWAREPROMPT}/main.sh"
 
 # from github: git/git/master/contrib/completion/git-completion.bash
 export GITCOMPLETION=${HOME}/.myconfig/bash/git-completion.bash
